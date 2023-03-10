@@ -33,7 +33,7 @@ body {
 
 #app {
     background: #292738;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 29.6rem max-content max-content;
     grid-template-rows: max-content;
     column-gap: 3.2rem;
     row-gap: 5.9rem;
@@ -44,12 +44,11 @@ body {
     min-height: 100vh;
 
     padding: 11.2rem 12.3rem;
+    place-content: center;
 }
 
 .box:nth-child(4) {
     grid-column: 1/4;
-    /* grid-column-start: 1;
-    grid-column-end: 4; */
 }
 
 .top {
@@ -63,6 +62,8 @@ body {
     justify-content: center;
     gap: 2rem;
     margin-top: auto;
+    font-weight: 500;
+    font-size: 1.4rem;
 }
 
 .bottom .item {
@@ -70,8 +71,34 @@ body {
     gap: 1rem;
 }
 
+.bottom .item span:nth-child(1){
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.bottom .item span {
+    --bg-color: #4A4556;
+}
+
+.bottom .item span:nth-child(1)::before{
+    content: "";
+    width: 1.5rem;
+    height: 1.5rem;
+    display: block;
+    background: var(--bg-color);
+    border-radius: 999px;
+}
+
+#primary {
+    --bg-color: linear-gradient(121.94deg, #CE9FFC 15.98%, #7367F0 82.85%);
+}
+
+#secondary {
+    --bg-color: linear-gradient(121.94deg, #df9780 15.98%, #a66de9 82.85%);
+}
+
 .nps {
-    width: 29.6rem;
     gap: 3.2rem;
 }
 
@@ -84,7 +111,9 @@ body {
 }
 
 .nps .bottom {
-    font-weight: 500;
-    font-size: 1.4rem;
     gap: 1rem;
+}
+
+.middle {
+    margin: auto auto;
 }
